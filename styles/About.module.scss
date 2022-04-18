@@ -1,0 +1,22 @@
+@mixin b {
+  border: 1px solid red;
+}
+
+.test {
+  color: rgb(37, 37, 37);
+  @include b;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-family: "ROBOTO";
+}
+.test1 {
+  color: rgb(255, 0, 0);
+  @include b;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-family: "ROBOTO";
+}
