@@ -1,10 +1,11 @@
-import React from 'react'
+import Link from 'next/link'
 
 const contact = () => {
   return (
-    <div>contact
-        <br />
-      <a href="http://localhost:3000">Home</a>
+    <div>
+      <h1>This is Contanct page</h1>
+      <br />
+      <Link href='/'><a>Home</a></Link>
 
     </div>
     

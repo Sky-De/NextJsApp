@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/About.module.scss'
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const posts = useSelector((state) => state.test);
+  console.log(posts);
+  // useEffect(()=>{
+  // },[posts])
   return (
     <div className={styles.container}>
       <Head>
@@ -12,12 +19,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta httpEquiv="Content-Language" content="en"/>
       </Head>
-      <h2 className={styles.test}>test</h2>
-      <h2 className={styles.test1}>test</h2>
-      <a href="contact" style={{fontSize:'5rem'}}>contact</a><br />
-      <a href="about" style={{fontSize:'5rem'}}>about</a>
+      
+      <h2>Home Page</h2>
 
-     
+      <Link href='/about'><a className={styles.link2}>about</a></Link><br/>
+      <Link href='/contact'><a className={styles.link2}>contact</a></Link><br />
+      <Link href='/posts'><a className={styles.link2}>posts</a></Link>
+
+      <br />
+      <br />
+
+      {posts.length > 0 && posts.map((i)=>{
+        <h6> {i.title} </h6>
+      })}
         
     </div>
   )

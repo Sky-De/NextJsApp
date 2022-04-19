@@ -2,14 +2,12 @@
   border: 1px solid red;
 }
 
-.test {
-  color: rgb(37, 37, 37);
-  @include b;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
+.link {
+  font-size: 2rem;
   font-family: "ROBOTO";
+}
+.link2 {
+  color: red !important;
 }
 .test1 {
   color: rgb(255, 0, 0);

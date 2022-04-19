@@ -1,13 +1,12 @@
-import React from 'react'
-
-const about = () => {
+import Link from 'next/link'
+const About = () => {
   return (
-    <div>about
-        <br />
-      <a href="http://localhost:3000">Home</a>
-
+    <div>
+      <h1>This is About page</h1>
+      <br />
+      <Link href="/"><a >Home</a></Link>
     </div>
   )
 }
 
-export default about
+export default About
