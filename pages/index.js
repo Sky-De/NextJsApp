@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const posts = useSelector((state) => state.test);
-  console.log(posts);
+  // console.log(posts);
   // useEffect(()=>{
   // },[posts])
   return (

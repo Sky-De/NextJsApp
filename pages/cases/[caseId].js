@@ -1,9 +1,11 @@
-
+import { useRouter } from "next/router";
 
 const ShowCasePage = ({post}) => {
-  return (
-    
-    <>
+    const router = useRouter();
+    if(router.isFallback) {
+        return <h1>Loading...</h1>
+    }
+  return ( <>
     <div>showCasePage</div>
     <h1>{post.id}</h1>
     <h2>{post.title}</h2>
@@ -16,6 +18,13 @@ export default ShowCasePage
 
 
 export async function getStaticPaths(){
+    // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    // const data = await res.json();
+    // const paths = data.map((post) => {
+    //     return {
+    //         params:{ caseId : `${post.id}`}
+    //     }
+    // })
     return {
         paths:[
             {
@@ -26,9 +35,11 @@ export async function getStaticPaths(){
             },
             {
                 params: { caseId: '3'}
-            }
+            },
+            
         ],
-        fallback: false,
+        // paths:paths,
+        fallback: true,
     }
 
 }
@@ -38,6 +49,12 @@ export async function getStaticProps(context) {
     
         const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.caseId}`);
         const data = await res.json();
+        if(!data.id){
+            return{
+                notFound: true
+            }
+        }
+        console.log(`page generated for :  ${params.caseId}`);
         return{
             props:{
                 post:data,

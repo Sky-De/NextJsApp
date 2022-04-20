@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Cases = ({cases}) => {
-    console.log(cases);
+    // console.log(cases);
   return (
     <div>
         <h1>List of Cases</h1>
@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 
     return{
         props:{
-            cases : data.slice(0,3)
+            cases : data,
         }
     }
 }
