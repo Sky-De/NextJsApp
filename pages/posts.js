@@ -12,7 +12,8 @@ const Posts = () => {
     <div>
         <h1>POSTS</h1>
         <br />
-        <Link href='/'><a>home</a></Link><br/>
+        <Link href='/'><a>home</a></Link>
+        <br/>
         
         <button onClick={handleClick}>CLICK to GET POSTS</button>
     </div>

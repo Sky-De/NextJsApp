@@ -1,4 +1,4 @@
-
+import styles from '../styles/Users.module.scss';
 const Users = ({ users }) => {
 
   return (
@@ -6,7 +6,7 @@ const Users = ({ users }) => {
     <h1>Users</h1>
     <br />
     <br />
-    <ol>
+    <ul className={styles.someThing}>
         {users.map((user) => {
         return (
             <li key={user.id}>
@@ -16,7 +16,7 @@ const Users = ({ users }) => {
             </li>
         )
     })}
-    </ol>
+    </ul>
     </>
 
   )
