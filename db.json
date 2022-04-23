@@ -1,5 +1,48 @@
 {
-  "data" : {
-    "sapmle":"test"
+  "news" : [
+    {
+      "id": 1,
+      "title": "News Article 1",
+      "description" : "im new description for this article",
+      "category": "sports"
+    },
+    {
+      "id": 2,
+      "title": "News Article 2",
+      "description" : "Description 2",
+      "category": "politics"
+    },
+    {
+      "id": 3,
+      "title": "News Article 3",
+      "description" : "Description 3",
+      "category": "sports"
+    }  
+  ],
+  "products" : [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price" : 1000,
+      "category": "shoes"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price" : 1500,
+      "category": "clothes"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price" : 500,
+      "category": "shoes"
+    }
+  ],
+  "dashboard": {
+    "posts": 5,
+    "likes": 100,
+    "followers": 20,
+    "following": 50
   }
 }

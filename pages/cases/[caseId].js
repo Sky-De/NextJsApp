@@ -58,6 +58,8 @@ export async function getStaticProps(context) {
         return{
             props:{
                 post:data,
+                // ISR incrimental static rendering
+                revalidate:30,
             },
         }
   
